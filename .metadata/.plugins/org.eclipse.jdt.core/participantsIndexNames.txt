@@ -1,0 +1,13 @@
+INDEX VERSION 1.130
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3978080.index
+\BankingApp\src
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2565470286.index
+\MvcExamples\src
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4269640090.index
+\JstlProjects\src
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4020567441.index
+\Project_3\src
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4094443125.index
+\JspProjects\src
+D:\cts java\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1481063482.index
+\assesment_on_24\src

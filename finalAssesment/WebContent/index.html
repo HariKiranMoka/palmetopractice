@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>college site</title>
+<style>
+  h1
+  {
+    text-align:center;
+    color:#770080;
+    font-family:courier New;
+    font-style:italic;
+  }
+  body
+  {
+    background-color:#FFAACC;
+  }
+
+</style>
+
+
+</head>
+<body>
+
+  <h1>College Trainig Feedback Form</h1>
+  <form >
+    <table align="center" >
+    <tr >
+      <td> <label>Participant Name</label></td>
+      <td><input type="textbox" name="participantName" required></td>
+    </tr>
+    <tr >
+      <td> <label>College Name</label></td>
+      <td><input type="textbox" name="collegeName" required></td>
+    </tr>
+    <tr >
+      <td> <label>Participant Address</label></td>
+      <td><textarea rows="5" cols="20" name="participantAddress"></textarea></td>
+    </tr>
+    <tr >
+      <td> <label>Gender</label></td>
+      <td><input type="radio" name="gender" value="male">male
+           <input type="radio" name="gender" value="female">female
+      </td>
+       
+    </tr>
+     <tr >
+      <td> <label>Email Id</label></td>
+      <td><input type="email" name="email" required></td>
+    </tr>
+     <tr >
+      <td> <label>College Name</label></td>
+      <td><input type="textbox" name="collegeName" required></td>
+    </tr>
+    <tr >
+      <td> <label>Mobile Number</label></td>
+      <td><input type="number" name="mobileNumber" pattern="[7-9]{1}[0-9]{9}" required></td>
+    </tr>
+    <tr >
+      <td> <label>Trainers Name</label></td>
+      <td><input type="textbox" name="trainersName" required></td>
+    </tr>
+    <tr >
+      <td> <label>Course Name</label></td>
+      <td><input type="textbox" name="courseName" required></td>
+    </tr>
+    <tr >
+      <td> <label>CourseCompletionDate</label></td>
+      <td><input type="date" name="dateofcompletion" required></td>
+    </tr>
+    <tr >
+      <td> <label>Trainer’s Feedback</label></td>
+      <td>
+      <input type="text" name="trainerfeedback" list="feedback" id="fb"/>
+      <datalist id="feedback">
+            <option value="Excellent"/>
+            <option value="verygood"/>
+            <option value="good"/>
+            <option value="average"/>
+            <option value="Below"/>
+      </datalist>
+      </td>
+    </tr>
+    <tr >
+      <td><input type="submit" name="submit"  value="submitFeedback" onclick="calculateFeedbackRating()" required></td>
+      <td><input type="reset" name="reset" value="clear" required></td>
+    </tr>
+    
+   </table>
+   
+   
+</script>
+ </form>
+ <script type="text/javascript">
+  function calculateFeedbackRating()
+  {
+      var feedback = document.getElementById("fb").value;
+      var trainer = document.getElementById("tname").value;
+      var feedbackrate="";
+     
+     
+      if(feedback == "Excellent")
+      {
+          feedbackrate = 5;
+      }
+      else if(feedback == "Very Good"){
+          feedbackrate = 4;
+      }
+      else if(feedback == "Good"){
+          feedbackrate = 3;
+      }
+      else if(feedback == "Average"){
+          feedbackrate = 2;
+      }
+      else if(feedback == "Below Average"){
+          feedbackrate = 1;
+      }
+      else
+      {
+          feedbackrate = 0;
+      }
+      document.getElementById("result").innerHTML = "Feedback rating of "+trainer+" is "+feedbackrate;
+      return false;
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+package ioexample;
+
+//import necessary packages
+import java.io.*;
+@SuppressWarnings("unchecked")//Do not delete this line
+ class FileManager 
+{
+   
+   static public File createFile()
+   {
+          File f=new File("visitors.txt");
+          try 
+          {
+              f.createNewFile();
+          } 
+          catch(Exception e)
+          {
+          } 
+          finally
+          {
+          }
+         
+          return f;
+   }
+   static public void writeFile(File f, String record)
+	{
+	    File f2=f;
+	    String record1=record;
+	   
+	    try
+	    {
+	         FileWriter f1=new FileWriter(f2);
+	         
+	         f1.write(record1);
+	       	  
+	    }
+	    catch(Exception e)
+	    {
+	        System.out.println(e);
+	    }
+	} 
+	static public String[] readFile(File f)
+	{
+	    FileInputReader fr=new FileInputReader(f);
+	    String[] s1;
+	    while(fr.read()!=-1)
+	    {
+	        s1[]=fr.read();
+	    }
+	    
+	   return s1; 
+	}
+}
+}

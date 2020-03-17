@@ -1,0 +1,12 @@
+package junit4Examples;
+
+import org.junit.Test;
+
+public class Mytest1 {
+	@Test
+	  public void test1()
+	  {
+		  System.out.println("test1");
+	  }
+	
+}

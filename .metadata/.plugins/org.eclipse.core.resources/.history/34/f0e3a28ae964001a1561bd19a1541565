@@ -1,0 +1,15 @@
+package junit4Examples;
+
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
+public class Mytest1 {
+	@Test
+	  public void test1()
+	  {
+		HelloWorld h=new HelloWorld();
+		assertEquals("m1=",h.m1());
+	  }
+	
+}

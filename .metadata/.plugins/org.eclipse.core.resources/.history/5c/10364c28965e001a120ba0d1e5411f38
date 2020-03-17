@@ -1,0 +1,76 @@
+package utilities;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class TravelAgency {
+	Connection connection;
+	public static void main (String[] args) throws FileNotFoundException
+	{
+		FileInputStream fis=new FileInputStream("D:\\cts java\\final_assesment_java\\WebContent\\VarshTourPackageDetails.txt");
+		DataInputStream dis=new DataInputStream(fis);
+		BufferedReader br=new BufferedReader(new InputStreamReader(dis));
+		String strLine;
+		ArrayList list=new ArrayList();
+		try {
+			strLine=br.readLine();
+			while(strLine!=null)
+			{
+				list.add(strLine);
+				strLine=br.readLine();
+				
+				
+			}
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		Iterator itr=list.iterator();
+		String id="",source="",des="";
+		float cost,discount;
+		int nod;
+		while(itr.hasNext())
+		{
+			
+			String str=(String) itr.next();
+			String[] str1=str.split(",");
+			for(int i=0;i<str1.length;i++)
+			{
+				id=str1[0];
+				boolean flag=validate(id);
+				if(flag)
+				{
+					source=str1[1];
+					des=str1[2];
+					cost=Float.parseFloat(str1[3]);
+					nod=Integer.parseInt(str1[4]);
+					if(nod<5)
+					{
+						discount=0;
+					}
+					else if(nod>=5&&nod<=8)
+					{
+						
+					}
+				}
+			}
+			
+		}
+		
+	}
+	boolean validate(String packageId)
+	{
+		return false;
+		
+	}
+
+}

@@ -1,0 +1,43 @@
+package practicingofexam;
+
+import java.io.*;
+import java.util.Scanner;
+public class main
+{
+    public static void main(String args[])
+    {
+      shape[] s=;
+      Scanner sc=new Scanner(System.in);
+      s[0]=new traingle();
+      System.out.println("Traingle");
+      ((traingle) s[0]).setBase(sc.nextDouble());
+      ((traingle) s[0]).setHeight(sc.nextDouble());
+      System.out.println("Sphere");
+       s[1]=new sphere();
+      ((sphere) s[1]).setRadius(sc.nextDouble());
+       System.out.println("Rectangle");
+       s[2]=new rectangle();
+       ((rectangle) s[2]).setLength(sc.nextDouble());
+       ((rectangle) s[2]).setWidth(sc.nextDouble());
+       System.out.println("Cube");
+       s[3]=new cube();
+       ((rectangle) s[3]).setLength(sc.nextDouble());
+       ((rectangle) s[3]).setWidth(sc.nextDouble());
+       ((traingle) s[3]).setHeight(sc.nextDouble());
+        s[4]=new traingle();
+      System.out.println("Traingle");
+      ((traingle) s[4]).setBase(sc.nextDouble());
+      ((traingle) s[4]).setHeight(sc.nextDouble());
+       System.out.println(s[0].area());
+       System.out.println(s[1].area());
+       System.out.println(s[1].volume());
+        System.out.println(s[2].area());
+        System.out.println(s[3].area());
+        System.out.println(s[3].volume());
+        System.out.println(s[4].area());
+      
+      
+      
+      
+    }
+}

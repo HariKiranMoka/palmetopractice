@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   <bean id="qump" class="config.Mapping">
+   <constructor-arg value="1"/>
+   <constructor-arg value="what is sql"/>
+   <constructor-arg>
+   <map>
+   <entry key="sql stands for structure query language" value="hari"></entry>
+   <entry key="sql is easy to learn " value="babai"></entry>
+   </map>
+   </constructor-arg> 
+   </bean>
+  
+   <bean id="emp" class="config.Employee">
+   <constructor-arg value="hari"/>
+   <constructor-arg value="87" type="int" />
+   </bean>
+   
+  </beans>

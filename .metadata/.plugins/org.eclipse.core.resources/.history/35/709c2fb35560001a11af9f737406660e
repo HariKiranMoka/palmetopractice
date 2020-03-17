@@ -1,0 +1,76 @@
+package ioexample;
+
+//import necessary packages
+import java.io.*;
+@SuppressWarnings("unchecked")//Do not delete this line
+ class FileManager 
+{
+   
+   static public File createFile()
+   {
+          File f=new File("visitors.txt");
+          try 
+          {
+              f.createNewFile();
+          } 
+          catch(Exception e)
+          {
+          } 
+          finally
+          {
+          }
+         
+          return f;
+   }
+   static public void writeFile(File f, String record)
+	{
+	   
+	   
+	    try
+	    {
+	    	System.out.println(f.getName());
+	         FileWriter f1=new FileWriter(f);
+	         
+	         f1.write(record);
+	       	  
+	    }
+	    catch(Exception e)
+	    {
+	        System.out.println(e);
+	    }
+	} 
+	static public void readFile(File f)
+	{
+	    FileReader fr;
+		try {
+			fr = new FileReader(f);
+			BufferedReader br=new BufferedReader(fr);
+			String[] s1;
+			int i;
+		    try 
+		    {
+		    	String s=br.readLine();
+		    	String s2="";
+				while(s!=null)
+				{
+					s2+=s;
+					s=br.readLine();
+				     
+	            }
+				s1=s.split(" ")
+			} 
+		    catch (IOException e)
+		    {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	    
+	    
+	   
+	}
+}
+

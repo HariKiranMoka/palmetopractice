@@ -1,0 +1,8 @@
+package practicingofexam;
+
+abstract public class shape
+{
+    public double area();
+
+     public double volume();
+}

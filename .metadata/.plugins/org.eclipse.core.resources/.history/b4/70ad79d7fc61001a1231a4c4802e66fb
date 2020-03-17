@@ -1,0 +1,24 @@
+package practicingofexam;
+import java.math.*;
+
+public class Sphere extends implements Spatial
+{ 
+	double radius;
+
+	public double getRadius() {
+		return radius;
+	}
+
+	public void setRadius(double radius) {
+		this.radius = radius;
+	}
+	public double area()
+	{
+	     return (4*PI*(radius*radius));
+	}
+
+     public double volume();
+     {
+         return (4*PI*(radius*radius*radius)/3);
+     }
+}

@@ -1,0 +1,49 @@
+package ioexample;
+
+import java.io.*;
+
+import java.util.Scanner;
+ @SuppressWarnings("unchecked")//Do not delete this line
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    FileManager f=new FileManager();
+	    File f1=f.createFile();
+	   /* Scanner sc=new Scanner(System.in);
+	    String br=null;
+	    
+	    System.out.println("Enter Name");
+	    br=sc.next();
+	    br=br+",";
+	    System.out.println("Enter Phone Number");
+	    String phno=sc.next();
+	    br+=phno;
+	    br+=",";
+	    System.out.println("Enter Email");
+	    String email=sc.next();
+	    br+=email;
+	    br+=";";
+	    //f.writeFile(f1,br);*/
+	   while(true)
+	   {
+		   System.out.println("Do you want to enter another record(yes/no)");
+		   String s=sc.next();
+		   if(s=="yes")
+		   {
+			   break;
+		   }
+		   else
+		   {
+			   f.readFile(f1);
+			   break;
+		   }
+	   }
+	    
+	   
+	   
+	    
+	    
+	}
+    
+}
